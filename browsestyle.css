@@ -1,0 +1,367 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+:root {
+  --primary: rgba(0, 0, 0, 0.65);
+  --secondary: rgba(0, 0, 0, 0.65);
+  --colorone: rgb(0, 0, 0);
+  --colotwo: rgb(67, 67, 67);
+}
+
+* {
+  color: white;
+  text-align: center;
+  font-family: sans-serif;
+}
+
+body {
+  background: black;
+  margin: 0;
+  width: 100%;
+}
+
+.container-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.vid {
+  display: none;
+  position: fixed;
+  top: 15%;
+  left: 17.5%;
+  width: 65%;
+  z-index: 10;
+  border: 1px solid white;
+  border-radius: 5px;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, var(--colorone), var(--colotwo));
+  opacity: 80%;
+  z-index: 2;
+}
+
+.upper_bod {
+  background: linear-gradient(90deg, var(--primary), var(--secondary)),
+    url("Images/joker1.webp") no-repeat center center;
+  background-size: cover;
+  margin-bottom: 8px;
+  width: 100%;
+  height: 800px;
+}
+
+/* navigation */
+.nav {
+  width: 96%;
+  max-width: 1615px;
+  height: 3rem;
+  margin: auto;
+  padding: 1em 0;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.nav .logo,
+.series_opt,
+.film_opt {
+  margin-right: 1.5em;
+}
+
+.nav .logo {
+  height: inherit;
+}
+
+.nav .logo img {
+  height: inherit;
+}
+
+.nav .film_opt,
+.series_opt {
+  font-size: 1.5em;
+  font-weight: 300;
+}
+
+.nav .film_opt a,
+.series_opt a {
+  text-decoration: none;
+}
+
+/* main content display on top */
+
+.upper_bod .head_con {
+  width: 100%;
+  height: 500px;
+}
+
+.head_con .top-content {
+  width: 40%;
+  margin-top: 15rem;
+  margin-left: 1.5rem;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 0 1.5rem 1rem 1.5rem;
+}
+
+.upper_bod .top-content div h1,
+p {
+  text-align: left;
+  margin: 0;
+}
+
+.upper_bod .top-content div h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+.upper_bod .top-content div p {
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+}
+
+.upper_bod .top-content .vplay {
+  width: 20%;
+  height: 15%;
+}
+
+.upper_bod .top-content .vplay input {
+  min-width: 135px;
+  min-height: 45px;
+  width: 100%;
+  height: 100%;
+  color: black;
+  padding: 0.5rem;
+  font-size: 1.3rem;
+  border: none;
+  border-radius: 3px;
+}
+
+.upper_bod .top-content .vplay input:hover {
+  cursor: pointer;
+}
+
+/* subsections of movies */
+
+.movie_sec {
+  width: 100%;
+  /* border: 1px solid white; */
+  margin-bottom: 8rem;
+}
+
+.movie_sec section {
+  width: 95%;
+  margin: auto;
+  margin-top: 2em;
+}
+.movie_sec section .sec_header {
+  padding: 0.2rem;
+  margin-bottom: 1rem;
+}
+
+.movie_sec section .sec_header h3 {
+  text-align: left;
+  font-size: 1.4rem;
+  margin: 0;
+}
+
+.movie_sec section .film_sec {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.movie_sec section .film_sec .mov_img {
+  /* margin-right: 0.7rem; */
+  width: 19%;
+  min-width: 230px;
+}
+
+.movie_sec section .film_sec .mov_img img {
+  width: 100%;
+}
+
+.movie_sec section .film_sec .mov_img .vplay:hover {
+  cursor: pointer;
+}
+
+/* footer */
+.browse_foot {
+  margin: 0;
+  height: 17.5rem;
+}
+
+.browse_foot .foot-contain {
+  width: 59%;
+  margin: auto;
+  padding: 1rem;
+}
+
+.browse_foot .foot-contain .contact2 {
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.browse_foot .foot-contain .contact2 div {
+  color: #757575;
+  margin-right: 0.5rem;
+  margin-bottom: 0.4rem;
+  font-size: 1.1rem;
+}
+
+.browse_foot .foot-contain .contact2 div a {
+  text-decoration: none;
+  color: #757575;
+}
+
+.browse_foot .foot-contain .contact2 div a:hover {
+  text-decoration: underline;
+}
+
+.browse_foot .foot-contain .foot-list {
+  /* border: 1px solid white; */
+  justify-content: flex-start;
+  margin-bottom: 1rem;
+}
+
+.browse_foot .foot-contain .foot-item {
+  width: 25%;
+  height: 2em;
+  text-align: left;
+  margin-bottom: 0.7rem;
+}
+
+.browse_foot .foot-contain .foot-item a {
+  text-decoration: none;
+  color: #757575;
+  font-size: 0.8rem;
+  align-items: center;
+}
+.browse_foot .foot-contain .foot-item a:hover {
+  text-decoration: underline;
+}
+
+.lang_sel2 {
+  width: fit-content;
+  border: 1px solid #757575;
+  border-radius: 2px;
+  padding: 0.6em 0.6em;
+}
+.lang2 select {
+  background: transparent;
+}
+
+.lang_sel2 .lang2 img:hover,
+.lang_sel2 .lang2 select:hover {
+  cursor: pointer;
+}
+
+.lang_sel2 .sel_lan {
+  border: none;
+  color: #757575;
+  font-size: 1em;
+  text-align: right;
+}
+
+.lang_sel2 .lang2 img {
+  width: 15px;
+  margin-right: 3px;
+}
+
+.foot-contain p {
+  color: #757575;
+  text-align: left;
+  margin-top: 1.5em;
+  font-size: 0.8em;
+}
+
+@media screen and (max-width: 850px) {
+  body {
+    margin: 0;
+    width: 100%;
+  }
+
+  .container-flex {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .upper_bod .nav {
+    width: 100%;
+    margin: 0;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .upper_bod .nav .logo,
+  .series_opt,
+  .film_opt {
+    padding: 0;
+  }
+
+  .head_con .top-content {
+    width: fit-content;
+    height: fit-content;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    margin: 0;
+    margin-top: 3rem;
+  }
+
+  .head_con .top-content .desc,
+  .main_head {
+    width: 95%;
+  }
+
+  .head_con .top-content .main_head h1,
+  .head_con .top-content .desc p {
+    text-align: center;
+  }
+
+  .movie_sec section .film_sec {
+    justify-content: space-between;
+  }
+
+  .browse_foot .foot-contain .foot-list {
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+
+  .browse_foot .foot-contain .foot-list .foot-item {
+    text-align: center;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+    width: fit-content;
+  }
+
+  .lang_sel2 {
+    margin: auto;
+  }
+
+  .foot-contain p {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 695px) {
+  .movie_sec section {
+    width: 100%;
+  }
+  .movie_sec section .sec_header h3 {
+    text-align: center;
+  }
+
+  .movie_sec section .film_sec {
+    align-items: center;
+    flex-direction: column;
+  }
+}
